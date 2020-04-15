@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 
@@ -13,6 +17,8 @@ public class PaymentHistory extends AppCompatActivity {
 
     ListView lv;
     ArrayAdapter aaHistory;
+    Spinner months;
+    ArrayList<String> history;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,11 +26,187 @@ public class PaymentHistory extends AppCompatActivity {
         setContentView(R.layout.activity_payment_history);
 
         lv = findViewById(R.id.biggerList);
+        months = findViewById(R.id.spinner);
+        history = new ArrayList();
 
-        ArrayList<String> list = (ArrayList<String>) getIntent().getSerializableExtra("myList");
-        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,list);
+        final ArrayList<String> list = (ArrayList<String>) getIntent().getSerializableExtra("myList");
 
-        lv.setAdapter(aaHistory);
+        months.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch(position){
+                    case 0:
+                        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,list);
+
+                        lv.setAdapter(aaHistory);
+
+                        break;
+                    case 1:
+                        for (int i = 0; i < list.size(); i++) {
+                            String[] separated = list.get(i).split("/");
+                            if( separated[1].equals("01")){
+                                history.add(list.get(i));
+
+                            }
+                        }
+
+                        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,history);
+                        lv.setAdapter(aaHistory);
+
+                        break;
+                    case 2:
+                        for (int i = 0; i < list.size(); i++) {
+                            String[] separated = list.get(i).split("/");
+                            if( separated[1].equals("02")){
+                                history.add(list.get(i));
+
+                            }
+                        }
+
+                        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,history);
+                        lv.setAdapter(aaHistory);
+
+                        break;
+                    case 3:
+                        for (int i = 0; i < list.size(); i++) {
+                            String[] separated = list.get(i).split("/");
+                            if( separated[1].equals("03")){
+                                history.add(list.get(i));
+
+                            }
+                        }
+
+                        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,history);
+                        lv.setAdapter(aaHistory);
+
+                        break;
+                    case 4:
+                        for (int i = 0; i < list.size(); i++) {
+                            String[] separated = list.get(i).split("/");
+                            if( separated[1].equals("04")){
+                                history.add(list.get(i));
+
+                            }
+                        }
+
+                        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,history);
+                        lv.setAdapter(aaHistory);
+
+                        break;
+                    case 5:
+                        for (int i = 0; i < list.size(); i++) {
+                            String[] separated = list.get(i).split("/");
+                            if( separated[1].equals("05")){
+                                history.add(list.get(i));
+
+                            }
+                        }
+
+                        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,history);
+                        lv.setAdapter(aaHistory);
+
+                        break;
+                    case 6:
+                        for (int i = 0; i < list.size(); i++) {
+                            String[] separated = list.get(i).split("/");
+                            if( separated[1].equals("06")){
+                                history.add(list.get(i));
+
+                            }
+                        }
+
+                        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,history);
+                        lv.setAdapter(aaHistory);
+
+                        break;
+                    case 7:
+                        for (int i = 0; i < list.size(); i++) {
+                            String[] separated = list.get(i).split("/");
+                            if( separated[1].equals("07")){
+                                history.add(list.get(i));
+
+                            }
+                        }
+
+                        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,history);
+                        lv.setAdapter(aaHistory);
+
+                        break;
+                    case 8:
+                        for (int i = 0; i < list.size(); i++) {
+                            String[] separated = list.get(i).split("/");
+                            if( separated[1].equals("08")){
+                                history.add(list.get(i));
+
+                            }
+                        }
+
+                        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,history);
+                        lv.setAdapter(aaHistory);
+
+                        break;
+                    case 9:
+                        for (int i = 0; i < list.size(); i++) {
+                            String[] separated = list.get(i).split("/");
+                            if( separated[1].equals("09")){
+                                history.add(list.get(i));
+
+                            }
+                        }
+
+                        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,history);
+                        lv.setAdapter(aaHistory);
+
+                        break;
+                    case 10:
+                        for (int i = 0; i < list.size(); i++) {
+                            String[] separated = list.get(i).split("/");
+                            if( separated[1].equals("10")){
+                                history.add(list.get(i));
+
+                            }
+                        }
+
+                        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,history);
+                        lv.setAdapter(aaHistory);
+
+                        break;
+                    case 11:
+                        for (int i = 0; i < list.size(); i++) {
+                            String[] separated = list.get(i).split("/");
+                            if( separated[1].equals("11")){
+                                history.add(list.get(i));
+
+                            }
+                        }
+
+                        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,history);
+                        lv.setAdapter(aaHistory);
+
+                        break;
+                    case 12:
+                        for (int i = 0; i < list.size(); i++) {
+                            String[] separated = list.get(i).split("/");
+                            if( separated[1].equals("12")){
+                                history.add(list.get(i));
+
+                            }
+                        }
+
+                        aaHistory=new ArrayAdapter(PaymentHistory.this, android.R.layout.simple_list_item_1,history);
+                        lv.setAdapter(aaHistory);
+
+                        break;
+
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
     }
 }
