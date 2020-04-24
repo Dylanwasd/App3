@@ -82,19 +82,23 @@ public class MainActivity extends AppCompatActivity {
                 String cost = (getRandomValue(number, 0, 3, 2));
                 double currentValue = Double.parseDouble(data.getText().toString());
                 Double totalCost = Double.parseDouble(cost);
-                Double finalValue = currentValue - totalCost;
-                String roundFinalValue = String.format("%.2f", finalValue);
+                if(currentValue > totalCost) {
+                    Double finalValue = currentValue - totalCost;
+                    String roundFinalValue = String.format("%.2f", finalValue);
+                    String stringCost = String.format("%.2f" , totalCost);
+                    Date c = Calendar.getInstance().getTime();
+                    SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+                    String formattedDate = df.format(c);
+                    history.add(0, "$" +stringCost + "\n" + formattedDate);
 
-                String stringCost = String.format("%.2f" , totalCost);
-                Date c = Calendar.getInstance().getTime();
-                SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-                String formattedDate = df.format(c);
-                history.add(0, "$" +stringCost + "\n" + formattedDate);
+                    aaHistory=new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1,history);
+                    lv.setAdapter(aaHistory);
 
-                aaHistory=new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1,history);
-                lv.setAdapter(aaHistory);
+                    data.setText(roundFinalValue);
+                }
 
-                data.setText(roundFinalValue);
+
+
             }
         });
         seeMore.setOnClickListener(new View.OnClickListener() {

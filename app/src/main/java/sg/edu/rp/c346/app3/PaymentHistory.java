@@ -42,6 +42,7 @@ public class PaymentHistory extends AppCompatActivity {
 
                         break;
                     case 1:
+                        history.clear();
                         for (int i = 0; i < list.size(); i++) {
                             String[] separated = list.get(i).split("/");
                             if( separated[1].equals("01")){
@@ -55,6 +56,7 @@ public class PaymentHistory extends AppCompatActivity {
 
                         break;
                     case 2:
+                        history.clear();
                         for (int i = 0; i < list.size(); i++) {
                             String[] separated = list.get(i).split("/");
                             if( separated[1].equals("02")){
@@ -68,6 +70,7 @@ public class PaymentHistory extends AppCompatActivity {
 
                         break;
                     case 3:
+                        history.clear();
                         for (int i = 0; i < list.size(); i++) {
                             String[] separated = list.get(i).split("/");
                             if( separated[1].equals("03")){
@@ -81,6 +84,7 @@ public class PaymentHistory extends AppCompatActivity {
 
                         break;
                     case 4:
+                        history.clear();
                         for (int i = 0; i < list.size(); i++) {
                             String[] separated = list.get(i).split("/");
                             if( separated[1].equals("04")){
@@ -94,6 +98,7 @@ public class PaymentHistory extends AppCompatActivity {
 
                         break;
                     case 5:
+                        history.clear();
                         for (int i = 0; i < list.size(); i++) {
                             String[] separated = list.get(i).split("/");
                             if( separated[1].equals("05")){
@@ -107,6 +112,7 @@ public class PaymentHistory extends AppCompatActivity {
 
                         break;
                     case 6:
+                        history.clear();
                         for (int i = 0; i < list.size(); i++) {
                             String[] separated = list.get(i).split("/");
                             if( separated[1].equals("06")){
@@ -120,6 +126,7 @@ public class PaymentHistory extends AppCompatActivity {
 
                         break;
                     case 7:
+                        history.clear();
                         for (int i = 0; i < list.size(); i++) {
                             String[] separated = list.get(i).split("/");
                             if( separated[1].equals("07")){
@@ -133,6 +140,7 @@ public class PaymentHistory extends AppCompatActivity {
 
                         break;
                     case 8:
+                        history.clear();
                         for (int i = 0; i < list.size(); i++) {
                             String[] separated = list.get(i).split("/");
                             if( separated[1].equals("08")){
@@ -146,6 +154,7 @@ public class PaymentHistory extends AppCompatActivity {
 
                         break;
                     case 9:
+                        history.clear();
                         for (int i = 0; i < list.size(); i++) {
                             String[] separated = list.get(i).split("/");
                             if( separated[1].equals("09")){
@@ -159,6 +168,7 @@ public class PaymentHistory extends AppCompatActivity {
 
                         break;
                     case 10:
+                        history.clear();
                         for (int i = 0; i < list.size(); i++) {
                             String[] separated = list.get(i).split("/");
                             if( separated[1].equals("10")){
@@ -172,6 +182,7 @@ public class PaymentHistory extends AppCompatActivity {
 
                         break;
                     case 11:
+                        history.clear();
                         for (int i = 0; i < list.size(); i++) {
                             String[] separated = list.get(i).split("/");
                             if( separated[1].equals("11")){
@@ -185,6 +196,7 @@ public class PaymentHistory extends AppCompatActivity {
 
                         break;
                     case 12:
+                        history.clear();
                         for (int i = 0; i < list.size(); i++) {
                             String[] separated = list.get(i).split("/");
                             if( separated[1].equals("12")){
